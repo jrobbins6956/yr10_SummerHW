@@ -26,11 +26,11 @@ Once you can explain the solution you might try to write a computer program to s
 
 ####How many trips from shore to shore must the boat take?
 ```
-answer here
+101
 ```
 ####Explain you algorithm here:
 ```
-answer here
+see code
 ```
 
 ##Extension
