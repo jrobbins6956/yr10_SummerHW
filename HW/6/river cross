@@ -1,0 +1,96 @@
+import time #importing time function
+loop = True
+
+list1 = ["C"] #lists to display problem being solved
+list2 = [".",".",".",".",".",".",".",".",".",".",".",".",".",".",".","."]
+list3 = ["C"]
+
+def printing(list1,list2,list3,userinputvar): #definiing function with parameters, function animates the solving of solution
+        list1.remove("C") #remove "C" from list1
+        list3.remove("C") #remove "C" from list3
+        list3.insert(0,"C") #insert "C" to start of list 3
+        list3.insert(0,"C")
+        print("".join(list1)), #print all three lists on one line without speech marks
+        print("".join(list2)),
+        print("".join(list3))
+
+        list3.remove("C")
+        list3.remove("C")
+        list1.append("C") #add "C" to end of list
+        list1.append("C")
+        print("".join(list1)),
+        print("".join(list2)),
+        print("".join(list3))
+
+        list1.remove("C")
+        list3.insert(0,"C")
+        print("".join(list1)),
+        print("".join(list2)),
+        print("".join(list3))
+        
+        list1.insert(0,"S")
+        list3.remove("S")
+        print("".join(list1)),
+        print("".join(list2)),
+        print("".join(list3))
+
+        return list1,list2,list3 #return variables
+        
+
+### MAIN PROGRAM ###
+print("This program only works in python 2") #outputs, introduction
+time.sleep(2) #pause 2 seconds
+print
+print("This program solves a problem involving soldiers crossing a river")
+time.sleep(2)
+print
+print("All the soldiers have to cross the river")
+time.sleep(2)
+print
+print("But...")
+time.sleep(2)
+print
+print("Only 1 soldier is allowed in the boat at a time")
+time.sleep(2)
+print
+print("There can either be 1 or 2 children in the boat at the same time")
+time.sleep(2)
+print
+print("And the boat has to have someone in it to cross the river")
+time.sleep(2)
+print
+print("????")
+time.sleep(2)
+print
+print("lets solve it...")
+print
+time.sleep(1.5)
+
+while loop == True: #loop whilst loop is equal to True (robustness)
+    userinputvar = input("How many soldiers are there going to be (please enter an integer) >>>") #user input
+    if userinputvar <= 1000: #if userinputvar is smaller or equal to 1000
+        loop = False #will exit loop
+    elif userinputvar > 1000:#if userinputvar is greater than 1000
+        print("Try a smaller number")
+    else:
+        print("Please type in an integer answer")#if userinput isnt an integer
+
+for x in range(userinputvar): #repeat same amount of times as value of userinputvar
+    list3.append ("S") #add an "S" to the end of list 3
+
+for x in range(userinputvar):
+    list1,list2,list3 = printing(list1,list2,list3,userinputvar)#calling function
+
+list1.remove("C")#moving both C's to same side for finish
+list3.insert(0,"C")
+print("".join(list1)),
+print("".join(list2)),
+print("".join(list3))
+print
+print("that took {0} journeys across the river".format(userinputvar *4 +1)) #outputting to user number of river crosses 
+print
+print("SOLVED")
+        
+        
+
+
